@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #FFD700;
+  --color-primary-dark: #ccac00;
+  --color-dark: #0A0A0A;
+  --color-dark-card: #111111;
+  
+  --font-heading: 'Barlow Condensed', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --animate-carousel: carousel 30s linear infinite;
+  --animate-pulse-glow: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-sonar: sonar 2s ease-out infinite;
+
+  @keyframes carousel {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-100% / 2)); } /* Assuming we duplicate items for seamless loop */
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.4), 0 0 20px rgba(255, 215, 0, 0.2);
+      transform: scale(1);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.4);
+      transform: scale(1.02);
+    }
+  }
+
+  @keyframes sonar {
+    0% {
+      transform: scale(0);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(3);
+      opacity: 0;
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-dark);
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-dark);
+  color: white;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+}
+
+/* Custom Utilities */
+.bg-scanline {
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(0,0,0,0) 0px,
+    rgba(0,0,0,0) 2px,
+    rgba(255, 215, 0, 0.03) 3px,
+    rgba(255, 215, 0, 0.03) 4px
+  );
+  pointer-events: none;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.card-3d-inner {
+  transition: transform 0.1s ease-out, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+/* Glitch Effect */
+.glitch-wrapper {
+  position: relative;
+}
+
+.glitch {
+  position: relative;
+  display: inline-block;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-dark);
+}
+
+.glitch-active::before {
+  left: 2px;
+  text-shadow: -2px 0 #FFD700;
+  clip: rect(24px, 550px, 90px, 0);
+  animation: glitch-anim 0.5s infinite linear alternate-reverse;
+}
+
+.glitch-active::after {
+  left: -2px;
+  text-shadow: -2px 0 #fff;
+  clip: rect(85px, 550px, 140px, 0);
+  animation: glitch-anim 0.3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% { clip: rect(10px, 9999px, 80px, 0); }
+  20% { clip: rect(60px, 9999px, 20px, 0); }
+  40% { clip: rect(30px, 9999px, 50px, 0); }
+  60% { clip: rect(80px, 9999px, 10px, 0); }
+  80% { clip: rect(40px, 9999px, 70px, 0); }
+  100% { clip: rect(10px, 9999px, 30px, 0); }
+}
+
+/* Gradient text */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #FFD700 0%, #FDB931 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Form floating label */
+.floating-input {
+  background-color: transparent;
+  border: 1px solid rgba(255,215,0,0.3);
+  padding: 1rem 1rem 0.5rem;
+}
+.floating-input:focus {
+  border-color: #FFD700;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 215, 0, 0.2);
+}
+.floating-label {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  transition: 0.2s ease all;
+  pointer-events: none;
+}
+.floating-input:focus ~ .floating-label,
+.floating-input:not(:placeholder-shown) ~ .floating-label {
+  top: 0.5rem;
+  font-size: 0.75rem;
+  color: #FFD700;
+}
