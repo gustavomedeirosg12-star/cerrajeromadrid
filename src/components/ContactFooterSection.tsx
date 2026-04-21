@@ -32,14 +32,14 @@ export default function ContactFooterSection() {
 
     const problemaFormat = problemaNombres[problema] || problema;
     
-    // Construir el mensaje
-    let mensaje = `🚨 *NUEVO AVISO DE URGENCIA* 🚨\n\n`;
+    // Construir el mensaje con emojis universales básicos
+    let mensaje = `🔴 *NUEVO AVISO DE URGENCIA* 🔴\n\n`;
     mensaje += `👤 *Cliente:* ${nombre}\n`;
-    mensaje += `📱 *Teléfono:* ${telefono}\n`;
-    mensaje += `🛠️ *Problema:* ${problemaFormat}\n`;
+    mensaje += `📞 *Teléfono:* ${telefono}\n`;
+    mensaje += `🔑 *Problema:* ${problemaFormat}\n`;
     
     if (descripcion) {
-      mensaje += `📝 *Detalles:* ${descripcion}\n`;
+      mensaje += `📋 *Detalles:* ${descripcion}\n`;
     }
     
     mensaje += `\n📍 *Estado:* Esperando respuesta...`;

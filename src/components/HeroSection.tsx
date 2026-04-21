@@ -40,10 +40,11 @@ export default function HeroSection() {
         </motion.div>
 
         {/* Hero Title with Typing Effect */}
-        <h1 className="font-heading text-6xl md:text-8xl lg:text-[100px] leading-tight md:leading-none tracking-tighter mb-4 text-white">
+        <h1 className="font-heading text-[12vw] sm:text-6xl md:text-8xl lg:text-[100px] leading-[1.1] md:leading-none tracking-tighter mb-4 text-white break-words w-full px-2">
           {titleChars.map((char, index) => (
             <motion.span
               key={index}
+              className="inline-block"
               initial={{ opacity: 0, filter: "blur(10px)" }}
               animate={{ opacity: 1, filter: "blur(0px)" }}
               transition={{ delay: index * 0.05 + 0.3, duration: 0.5 }}
