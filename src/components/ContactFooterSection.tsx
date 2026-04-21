@@ -33,16 +33,16 @@ export default function ContactFooterSection() {
     const problemaFormat = problemaNombres[problema] || problema;
     
     // Construir el mensaje
-    let mensaje = `🚨 *URGENCIA CERRAJERÍA* 🚨\n\n`;
-    mensaje += `*Nombre:* ${nombre}\n`;
-    mensaje += `*Teléfono:* ${telefono}\n`;
-    mensaje += `*Servicio requerido:* ${problemaFormat}\n`;
+    let mensaje = `🚨 *NUEVO AVISO DE URGENCIA* 🚨\n\n`;
+    mensaje += `👤 *Cliente:* ${nombre}\n`;
+    mensaje += `📱 *Teléfono:* ${telefono}\n`;
+    mensaje += `🛠️ *Problema:* ${problemaFormat}\n`;
     
     if (descripcion) {
-      mensaje += `*Detalles:* ${descripcion}\n`;
+      mensaje += `📝 *Detalles:*\n_${descripcion}_\n`;
     }
     
-    mensaje += `\n_Por favor, necesito asistencia lo antes posible._`;
+    mensaje += `\n📍 \`Esperando respuesta de unidad...\``;
 
     // Codificar URL y abrir WhatsApp
     const url = `https://wa.me/34669881469?text=${encodeURIComponent(mensaje)}`;
