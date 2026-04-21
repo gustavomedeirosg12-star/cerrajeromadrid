@@ -45,7 +45,7 @@ export default function ContactFooterSection() {
     mensaje += `\n_Por favor, necesito asistencia lo antes posible._`;
 
     // Codificar URL y abrir WhatsApp
-    const url = `https://wa.me/34612345678?text=${encodeURIComponent(mensaje)}`;
+    const url = `https://wa.me/34669881469?text=${encodeURIComponent(mensaje)}`;
     window.open(url, '_blank');
   };
 
@@ -69,7 +69,7 @@ export default function ContactFooterSection() {
                 <Phone className="w-8 h-8 text-[#FFD700]" />
               </div>
               <h3 className="text-gray-400 font-medium mb-2 uppercase tracking-widest text-sm">Teléfono 24H</h3>
-              <p className="text-3xl font-bold text-white mb-2">612 34 56 78</p>
+              <p className="text-3xl font-bold text-white mb-2">669 88 14 69</p>
               
               <div className="flex flex-col items-center flex-grow justify-center py-4 opacity-70">
                 <div className="text-xs text-[#FFD700] mb-3 font-semibold uppercase tracking-widest border border-[#FFD700]/30 rounded-full px-3 py-1 bg-[#FFD700]/5">
@@ -83,7 +83,7 @@ export default function ContactFooterSection() {
                 </div>
               </div>
 
-              <a href="tel:+34612345678" className="w-full mt-auto bg-[#FFD700] hover:bg-[#e6c200] text-black font-bold py-4 rounded-xl transition-colors shadow-[0_0_15px_rgba(255,215,0,0.3)] block">
+              <a href="tel:+34669881469" className="w-full mt-auto bg-[#FFD700] hover:bg-[#e6c200] text-black font-bold py-4 rounded-xl transition-colors shadow-[0_0_15px_rgba(255,215,0,0.3)] block">
                 Llamar ahora
               </a>
             </div>
@@ -163,7 +163,7 @@ export default function ContactFooterSection() {
                 </div>
               </div>
 
-              <a href="https://wa.me/34612345678" target="_blank" rel="noopener noreferrer" className="w-full mt-auto bg-transparent border-2 border-green-500 hover:bg-green-500 text-white font-bold py-4 rounded-xl transition-colors flex items-center justify-center gap-2">
+              <a href="https://wa.me/34669881469" target="_blank" rel="noopener noreferrer" className="w-full mt-auto bg-transparent border-2 border-green-500 hover:bg-green-500 text-white font-bold py-4 rounded-xl transition-colors flex items-center justify-center gap-2">
                 <MessageCircle className="w-6 h-6" /> Abrir chat
               </a>
             </div>

@@ -47,7 +47,7 @@ function Landing() {
 
       {/* Floating WhatsApp Bubble - Desktop & Mobile */}
       <a 
-        href="https://wa.me/34612345678" 
+        href="https://wa.me/34669881469" 
         target="_blank" 
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center text-white shadow-[0_4px_15px_rgba(34,197,94,0.4)] hover:scale-110 hover:bg-green-400 transition-all hidden md:flex"
@@ -60,14 +60,14 @@ function Landing() {
       <div className="fixed bottom-0 left-0 w-full z-50 p-4 md:hidden bg-gradient-to-t from-[#0A0A0A] to-transparent pb-6">
         <div className="flex gap-2 w-full">
           <a 
-            href="tel:+34612345678" 
+            href="tel:+34669881469" 
             className="flex-1 bg-[#FFD700] text-black font-bold h-14 rounded-full flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(255,215,0,0.3)] animate-[pulse-glow_2s_infinite]"
             aria-label="Llamar urgencia"
           >
             <Phone className="w-5 h-5 animate-bounce" /> Llamar 24H
           </a>
           <a 
-            href="https://wa.me/34612345678" 
+            href="https://wa.me/34669881469" 
             target="_blank" 
             rel="noopener noreferrer"
             className="w-14 h-14 bg-green-500 rounded-full flex items-center justify-center text-white shadow-lg shrink-0"

@@ -69,7 +69,7 @@ export default function CoverageSection() {
             className="mt-12 p-6 bg-[rgba(255,215,0,0.05)] border border-dashed border-[#FFD700]/30 rounded-xl text-center lg:text-left"
           >
             <p className="text-gray-300 font-medium mb-4">¿No ves tu zona? Llámanos, seguro que llegamos.</p>
-            <a href="tel:+34612345678" className="inline-block bg-white text-black font-bold px-6 py-3 rounded-lg hover:bg-gray-200 transition-colors">
+            <a href="tel:+34669881469" className="inline-block bg-white text-black font-bold px-6 py-3 rounded-lg hover:bg-gray-200 transition-colors">
               Consultar disponibilidad
             </a>
           </motion.div>

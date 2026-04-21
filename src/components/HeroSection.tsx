@@ -95,17 +95,17 @@ export default function HeroSection() {
         >
           <motion.a 
             variants={itemVariants}
-            href="tel:+34612345678"
+            href="tel:+34669881469"
             className="w-full sm:w-auto flex items-center justify-center gap-3 bg-[#FFD700] hover:bg-[#e6c200] text-black font-bold text-xl md:text-2xl px-8 py-5 rounded-xl transition-colors animate-[pulse-glow_2s_infinite] shadow-[0_0_20px_rgba(255,215,0,0.4)] relative overflow-hidden group"
           >
             <span className="absolute inset-0 w-full h-full bg-white/20 -translate-x-full group-hover:animate-[shimmer_1s_infinite]"></span>
             <Phone className="w-6 h-6 animate-bounce" />
-            LLAMAR AHORA — 612 34 56 78
+            LLAMAR AHORA — 669 88 14 69
           </motion.a>
 
           <motion.a 
             variants={itemVariants}
-            href="https://wa.me/34612345678"
+            href="https://wa.me/34669881469"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto flex items-center justify-center gap-3 bg-transparent border-2 border-white hover:bg-white hover:text-black text-white font-bold text-lg md:text-xl px-8 py-5 rounded-xl transition-all"
