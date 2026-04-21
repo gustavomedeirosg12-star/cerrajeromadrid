@@ -39,10 +39,10 @@ export default function ContactFooterSection() {
     mensaje += `🛠️ *Problema:* ${problemaFormat}\n`;
     
     if (descripcion) {
-      mensaje += `📝 *Detalles:*\n_${descripcion}_\n`;
+      mensaje += `📝 *Detalles:* ${descripcion}\n`;
     }
     
-    mensaje += `\n📍 \`Esperando respuesta de unidad...\``;
+    mensaje += `\n📍 *Estado:* Esperando respuesta...`;
 
     // Codificar URL y abrir WhatsApp
     const url = `https://wa.me/34669881469?text=${encodeURIComponent(mensaje)}`;
